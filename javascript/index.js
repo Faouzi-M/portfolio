@@ -1,6 +1,6 @@
+import "./projets";
 const skills=document.querySelector(".skills");
 const popup=document.querySelector(".popup");
-const projects=document.querySelector(".projects");
 const ErrorDisplay=document.querySelector(".invaliablemessage");
 const butt=document.querySelectorAll(".button-projects");
 const img1=document.querySelector(".img1");
@@ -90,57 +90,4 @@ const fectchDataUser=async ()=>{
       },
       body:JSON.stringify(obj)
     });
-}
-
-
-const Next=document.querySelector(".next")
-const projet=document.querySelectorAll(".projet")
-console.log(projet.length)
-const Previous=document.querySelector(".previous")
-const projetsCantainer=document.querySelector(".projetsCantainer")
-
-
-
-
-Previous.addEventListener("click",()=>{
-  previous()
-})
-Next.addEventListener("click",()=>{
-  next(Next);
-})
-function previous(){
-  let widthProjet=document.querySelector(".projetsCantainer").offsetWidth;
-  let currentIndex= 0;
-  projetsCantainer.scrollLeft -= widthProjet;
-  const scrollleft=projetsCantainer.scrollLeft
-  
-  projetsCantainer.scrollLeft -= widthProjet
-  if(scrollleft==0){
-   projetsCantainer.scrollLeft = widthProjet *(projet.length - 1)
   }
- Next.style.opacity=0.3
- Previous.style.opacity=1
-  
-}
-function next(Next){
-  let widthProjet=document.querySelector(".projetsCantainer").offsetWidth;
-  projetsCantainer.scrollLeft += widthProjet;
-  const scrollleft=projetsCantainer.scrollLeft
-  console.log(scrollleft)
-  console.log(widthProjet *(projet.length - 1))
-    if(widthProjet *(projet.length - 1)==scrollleft){
-        projetsCantainer.scrollLeft=0;
-    }
-    Previous.style.opacity=0.3
-    Next.style.opacity=1
-   }
-  document.addEventListener('keydown', function(event) {
-    switch(event.key) {
-        case 'ArrowLeft':
-            previous();
-            break;
-        case 'ArrowRight':
-            next();
-            break;
-}
-});
