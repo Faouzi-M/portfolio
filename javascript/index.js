@@ -1,4 +1,4 @@
-import "./projets";
+import "./projets.js";
 const skills=document.querySelector(".skills");
 const popup=document.querySelector(".popup");
 const ErrorDisplay=document.querySelector(".invaliablemessage");
