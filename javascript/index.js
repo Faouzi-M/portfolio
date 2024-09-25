@@ -83,7 +83,7 @@ const fectchDataUser=async ()=>{
   const entries = formData.entries();
   const obj = Object.fromEntries(entries);
 
-    let response = await fetch("https://api-server-ews4.onrender.com/api/data", {
+    let response = await fetch("https://198ff7b6-cadf-4173-8662-1a30fbf4ba41-00-e2qti5gxv752.picard.replit.dev/api/data", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
